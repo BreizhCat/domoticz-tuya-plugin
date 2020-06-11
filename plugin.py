@@ -18,17 +18,28 @@
 #
 """
 <plugin key="YATP4D" name="YATP4D" author="BreizhCat" version="0.0.1" externallink="https://github.com/BreizhCat/domoticz-tuya-plugin">
+    <description>
+        <h2>Yet Another Tuya Plugin For Domoticz (YATP4D)</h2><br/>
+        <h3>Features</h3>
+        <ul style="list-style-type:square">
+            <li>Use the Tuya Cloud API</li>
+        </ul>
+        <h3>Devices</h3>
+        <ul style="list-style-type:square">
+            <li>Switch - On/Off - Allow to turn on/off switch through Tuya API</li>
+        </ul>
+    </description>
     <params>
-        <param field="client_id" label="Client ID" width="200px" required="true" default=""/>
-        <param field="app_id" label="Application ID" width="200px" required="true" default="" />
-        <param field="devices" label="Devices list (separeted by ,) "width="500px" required="true" default="" />
+        <param field="Mode1" label="Client ID" width="200px" required="true" default=""/>
+        <param field="Mode2" label="Application ID" width="200px" required="true" default="" />
+        <param field="Mode3" label="Devices list (separeted by ,) "width="500px" required="true" default="" />
     </params>
 </plugin>
 """
 
 # https://www.domoticz.com/wiki/Developing_a_Python_plugin
 
-import domoticz as Domoticz
+import Domoticz
 
 class BasePlugin:
     enabled = False
